@@ -14,11 +14,11 @@ connection.once('open', ()=> {
     console.log('MongoDB connection successful')
 })
 app.use('/api',authRouter)
-app.use('/api/admin',adminRouter)
+app.use('/admin',adminRouter)
 app.get('/',(req,res) => {
-    res.send('hello world')
+    res.send('Welcome to the authentication API built with JWT. API endpoints are /api/register, /api/login, /admin')
 })
 
 
 
-app.listen(3000, ()=> console.log('server started successfully'))
+app.listen(3000, ()=> console.log('server started successfully on port 3000'))
